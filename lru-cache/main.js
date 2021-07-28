@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable no-console */
 /*
 Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.
 
