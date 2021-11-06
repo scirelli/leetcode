@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+pudb = "*"
+pylint = "*"
+pytest = "*"
+pytest-pylint = "*"
+pytest-flake8 = "*"
+flake8 = "*"
+pytest-mock = "*"
+typing-extensions = "*"
+mypy = "*"
+mypy-extensions = "*"
+black = "==21.5b1"
+
+[requires]
+python_version = "3.9"
