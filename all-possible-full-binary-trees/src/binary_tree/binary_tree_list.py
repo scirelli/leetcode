@@ -7,6 +7,12 @@ class BinaryTreeList:
     def __init__(self, tree: List[int]):
         self._binary_tree: List[int] = tree
 
+    def Nodes(self) -> List[int]:
+        return self._binary_tree
+
+    def Insert(self, index: int, value: int = 0) -> None:
+        self._binary_tree[index] = value
+
     def LeftSibling(self, index: int) -> Tuple[int, int]:
         """
         Left sibling(r) = r−1; if r is even and r≠0.
@@ -54,8 +60,18 @@ class BinaryTreeList:
         p = (index - 1) >> 1
         return (p, self._binary_tree[p])
 
+    def Length(self):
+        return len(self.Nodes())
+
+    def Clone(self) -> BinaryTreeList:
+        return BinaryTreeList(self.Nodes()[:])
+
     def __str__(self) -> str:
         return self._binary_tree.__str__()
 
     def __repr__(self) -> str:
         return self._binary_tree.__repr__()
+
+
+def treeFactory(length: int, default_value: int = None) -> BinaryTreeList:
+    return BinaryTreeList([default_value for _ in range(length)])
